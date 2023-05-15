@@ -1,0 +1,105 @@
+.container {
+  border: 1px solid #52847e;
+  width: 100%;
+  height: 340px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px;
+}
+
+.sub_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.header {
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: #52847e;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  padding: 6px;
+  padding-left: 12px;
+}
+
+.dateAndTimeContainer {
+  width: 100%;
+  height: 148px;
+  background-color: #e9f1f0;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+.dateAndTimeContainer table {
+  width: 100%;
+  display: flex;
+  font-size: 0.9rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dateAndTimeContainer td {
+  width: 40px;
+  text-align: center;
+}
+
+.dateAndTimeContainer td input {
+  width: 16px;
+  height: 16px;
+}
+
+.startTimeAndEnd {
+  width: 100%;
+  height: auto;
+}
+
+.startTime {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 4px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.startTime input {
+  padding-left: 14px;
+  width: 50px;
+  height: 30px;
+}
+
+.label {
+  margin-right: 8px;
+}
+
+.startTime select {
+  width: 50px;
+  height: 30px;
+  border-radius: 6px;
+}
+
+.startTime input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.dateAndTimeContainer:nth-child(2) {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding-right: 20px;
+  font-size: 0.9rem;
+  justify-content: center;
+  gap: 10px;
+}
+
+.otherInfo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}

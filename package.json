@@ -9,10 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@azure/msal-browser": "^2.37.0",
+    "@azure/msal-react": "^1.5.7",
+    "@prisma/client": "^4.14.0",
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
+    "ionicons": "^7.1.0",
+    "mysql": "^2.18.1",
     "next": "13.3.4",
+    "prisma": "^4.14.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.4"
