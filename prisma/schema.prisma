@@ -5,6 +5,7 @@ generator client {
 datasource db {
     provider = "mysql"
     url = env("DATABASE_URL")
+    relationMode = "prisma"
 }
 
 model Course {
@@ -12,8 +13,9 @@ model Course {
     day String
     startTime Int
     endTime Int
-    dayOrNoon String
+    morning Boolean
     course String
+    subject String
     instructor String
     room Int
     createdAt  DateTime @default(now())

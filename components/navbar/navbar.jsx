@@ -27,6 +27,29 @@ const Navbar = () => {
             name="menu-sharp"
           ></ion-icon>
         </div>
+        <div className={styles.nav}>
+          <p className={styles.title}>Schedule Generator</p>
+          <nav>
+            <ul className={styles.nav_link}>
+              <li>
+                <img className={styles.navicon} src="/home.png" />
+                <p>Home</p>
+              </li>
+              <li>
+                <img className={styles.navicon} src="/calendar.png" />
+                <p>Calendar</p>
+              </li>
+              <li>
+                <img className={styles.navicon} src="/dashboard.png" />
+                <p>Dashboard</p>
+              </li>
+              <li>
+                <img className={styles.navicon} src="/settings.png" />
+                <p>Settings</p>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div className={styles.left_div}>
         <div onClick={showNavHandler} className={styles.icon_container}>

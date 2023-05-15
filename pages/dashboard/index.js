@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useAuth } from '@/hooks/useAuth';
 import style from './index.module.css';
 import { useEffect, useState } from 'react';
@@ -57,6 +58,9 @@ const Dashboard = () => {
 
   return (
     <div className={style.container}>
+      <Head>
+        <title>Calendar</title>
+      </Head>
       <Navbar />
       {addSchedModal && <AddSchedule onConfirm={addSchedModalHandler} />}
       {editSchedModal && (
