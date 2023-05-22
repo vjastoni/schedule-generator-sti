@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <Head>
-        <title>Schedule Generator</title>
+        <title>Schedule Generator Gacilo Branch</title>
       </Head>
       <main>
         <SignIn />
