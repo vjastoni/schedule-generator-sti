@@ -16,6 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </AuthProvider>
       <Script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" />
       <Script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" />
+      
     </MsalProvider>
   );
 }

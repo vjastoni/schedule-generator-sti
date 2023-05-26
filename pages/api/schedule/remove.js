@@ -1,11 +1,9 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { prisma } from "@/prisma/db";
-import type { NextApiRequest, NextApiResponse } from "next";
+import { prisma } from "../../../prisma/db";
 
-export default async function handler(
-	req: NextApiRequest,
-	res: NextApiResponse
-) {
+/**
+ * @type {import('next').NextApiHandler}
+ */
+export default async (req, res) => {
 	if (req.method !== "DELETE") {
 		res.status(405).json({ error: "Method not allowed" });
 	}
@@ -26,4 +24,4 @@ export default async function handler(
 	res.status(200).json({
 		message: `Deleted schedule with id ${req.body.id}`,
 	});
-}
+};
