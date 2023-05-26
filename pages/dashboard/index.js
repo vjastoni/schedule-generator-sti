@@ -106,7 +106,7 @@ const Dashboard = () => {
           />
         </div>
         <div className={style.calendar}>
-          <Calendar />
+          <Calendar onConfirm={openEditFormHandler} />
         </div>
       </div>
     </div>
