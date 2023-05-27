@@ -1,4 +1,4 @@
-import { prisma } from "../../../prisma/db";
+import { prisma } from "../../../../prisma/db";
 
 /**
  * @type {import('next').NextApiHandler}
@@ -13,7 +13,7 @@ export default async (req, res) => {
 	}
 	const deletedSchedule = await prisma.schedule.delete({
 		where: {
-			id: req.body.id,
+			id: req.query.id,
 		},
 	});
 

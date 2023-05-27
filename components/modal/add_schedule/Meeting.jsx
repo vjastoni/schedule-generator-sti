@@ -1,4 +1,3 @@
-import Script from "next/script";
 import styles from "./Meeting.module.css";
 
 const Meeting = (props) => {
@@ -25,45 +24,136 @@ const Meeting = (props) => {
 							}}
 						>
 							<td>
-								<input name="day" id="Mon" type="radio" />
+								<input
+									name="day"
+									id="Mon"
+									type="radio"
+									defaultChecked={
+										props.schedule?.day && props.schedule?.day === "Mon"
+									}
+								/>
 							</td>
 							<td>
-								<input name="day" id="Tue" type="radio" />
+								<input
+									name="day"
+									id="Tue"
+									type="radio"
+									defaultChecked={
+										props.schedule?.day && props.schedule?.day === "Tue"
+									}
+								/>
 							</td>
 							<td>
-								<input name="day" id="Wed" type="radio" />
+								<input
+									name="day"
+									id="Wed"
+									type="radio"
+									defaultChecked={
+										props.schedule?.day && props.schedule?.day === "Wed"
+									}
+								/>
 							</td>
 							<td>
-								<input name="day" id="Thu" type="radio" />
+								<input
+									name="day"
+									id="Thu"
+									type="radio"
+									defaultChecked={
+										props.schedule?.day && props.schedule?.day === "Thu"
+									}
+								/>
 							</td>
 							<td>
-								<input name="day" id="Fri" type="radio" />
+								<input
+									name="day"
+									id="Fri"
+									type="radio"
+									defaultChecked={
+										props.schedule?.day && props.schedule?.day === "Fri"
+									}
+								/>
 							</td>
 							<td>
-								<input name="day" id="Sat" type="radio" />
+								<input
+									name="day"
+									id="Sat"
+									type="radio"
+									defaultChecked={
+										props.schedule?.day && props.schedule?.day === "Sat"
+									}
+								/>
 							</td>
 							<td>
-								<input name="day" id="Sun" type="radio" />
+								<input
+									name="day"
+									id="Sun"
+									type="radio"
+									defaultChecked={
+										props.schedule?.day && props.schedule?.day === "Sun"
+									}
+								/>
 							</td>
 						</tr>
 					</table>
 					<div className={styles.startTimeAndEnd}>
 						<div className={styles.startTime}>
 							<p>Start Time</p>
-							<input type="number" id="startHour" placeholder="12" />
+							<input
+								type="number"
+								id="startHour"
+								placeholder={
+									props.schedule ? props.schedule.startTime.split(":")[0] : "12"
+								}
+							/>
 							<p>:</p>
-							<input type="number" id="startMin" placeholder="00" />
-							<select id="startType">
+							<input
+								type="number"
+								id="startMin"
+								placeholder={
+									props.schedule
+										? props.schedule.startTime.slice(0, -3).split(":")[1]
+										: "00"
+								}
+							/>
+							<select
+								id="startType"
+								defaultValue={
+									props.schedule && props.schedule.startTime.includes("AM")
+										? "AM"
+										: "PM"
+								}
+							>
 								<option value={"AM"}>AM</option>
 								<option value={"PM"}>PM</option>
 							</select>
 						</div>
 						<div className={styles.startTime}>
 							<p className={styles.label}>End Time</p>
-							<input type="number" id="endHour" placeholder="12" />
+							<input
+								type="number"
+								id="endHour"
+								placeholder={
+									props.schedule ? props.schedule.endTime.split(":")[0] : "12"
+								}
+							/>
 							<p>:</p>
-							<input type="number" id="endMin" placeholder="00" />
-							<select id="endType">
+							<input
+								type="number"
+								id="endMin"
+								placeholder={
+									props.schedule
+										? props.schedule.endTime.slice(0, -3).split(":")[1]
+										: "00"
+								}
+							/>
+							<select
+								id="endType"
+								defaultValue={
+									props.schedule && props.schedule.endTime.includes("AM")
+										? "AM"
+										: "PM"
+								}
+							>
 								<option value={"AM"}>AM</option>
 								<option value={"PM"}>PM</option>
 							</select>
@@ -75,7 +165,11 @@ const Meeting = (props) => {
 						<p>Course</p>
 						<input
 							type="text"
-							placeholder="optional (ex. Lab)"
+							placeholder={
+								props.schedule?.subject
+									? props.schedule.subject
+									: "optional (ex. Lab)"
+							}
 							onChange={(e) => {
 								props.setParentCourse(e.target.value);
 							}}
@@ -85,7 +179,11 @@ const Meeting = (props) => {
 						<p>Instructor</p>
 						<input
 							type="text"
-							placeholder="optional"
+							placeholder={
+								props.schedule?.instructor
+									? props.schedule.instructor
+									: "optional"
+							}
 							onChange={(e) => {
 								props.setParentInstructor(e.target.value);
 							}}
@@ -95,7 +193,9 @@ const Meeting = (props) => {
 						<p>Room</p>
 						<input
 							type="text"
-							placeholder="optional"
+							placeholder={
+								props.schedule?.room ? props.schedule.room : "optional"
+							}
 							onChange={(e) => {
 								props.setParentRoom(e.target.value);
 							}}
