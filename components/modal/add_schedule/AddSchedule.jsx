@@ -3,8 +3,12 @@ import styles from "./AddSchedule.module.css";
 import { useEffect, useState } from "react";
 import { Backdrop } from "./Backdrop";
 import Meeting from "./Meeting";
+import { fetcher } from "../../../prisma/fetcher";
+import useSWRMutation from "swr/mutation";
 
 const AddSchedule = (props) => {
+	const { trigger } = useSWRMutation(`/api/schedule/all`, fetcher);
+
 	const [courseTitle, setCourseTitle] = useState("");
 	const [meetingDay, setMeetingDay] = useState("");
 	const [course, setCourse] = useState("");
@@ -23,7 +27,7 @@ const AddSchedule = (props) => {
 
 			const startTime = `${startHour}:${startMin} ${startType}`;
 			const endTime = `${endHour}:${endMin} ${endType}`;
-			const res = await fetch("api/schedule/add", {
+			await fetch("api/schedule/add", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -38,8 +42,8 @@ const AddSchedule = (props) => {
 					endTime: endTime,
 				}),
 			});
-
-			console.log(await res.json());
+			trigger();
+			props.onConfirm();
 		}
 	};
 

@@ -4,7 +4,7 @@ import { prisma } from "../../../prisma/db";
  * @type {import('next').NextApiHandler}
  */
 export default async (req, res) => {
-	if (req.method !== "PUT") {
+	if (req.method !== "POST") {
 		res.status(405).json({ error: "Method not allowed" });
 	}
 
@@ -16,7 +16,15 @@ export default async (req, res) => {
 		where: {
 			id: req.body.id,
 		},
-		data: req.body,
+		data: {
+			course: req.body.courseTitle,
+			day: req.body.day,
+			instructor: req.body.instructor,
+			room: req.body.room,
+			startTime: req.body.startTime,
+			endTime: req.body.endTime,
+			subject: req.body.course,
+		},
 	});
 
 	if (!updatedSchedule) {
