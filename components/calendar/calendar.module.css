@@ -45,11 +45,38 @@
   background-color: #ffe37d;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 6px;
+  gap: 2px;
   font-size: 0.7rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .schedule:hover {
   cursor: pointer;
+}
+
+.timeContainer {
+  width: 100%;
+  display: flex;
+  gap: 2px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.course {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+@media (min-width: 1280px) {
+  .day_container {
+    width: 240px;
+    height: 100%;
+    border-radius: 6px;
+    background-color: #e4ebee;
+    border: 1px solid #0078d4;
+  }
 }

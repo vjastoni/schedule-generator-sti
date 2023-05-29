@@ -85,7 +85,7 @@ const Dashboard = () => {
             image="/add_sched.png"
             label="Add Schedule"
           />
-          <OptionButton
+          {/* <OptionButton
             onClick={editSchedModalHandler}
             image="/edit_sched.png"
             label="Edit Schedule"
@@ -94,7 +94,7 @@ const Dashboard = () => {
             onClick={deleteSchedModalHandler}
             image="/delete_sched.png"
             label="Delete Schedule"
-          />
+          /> */}
           <OptionButton image="/save_sched.png" label="Save Schedule" />
           <OptionButton image="/print_sched.png" label="Print" />
           <OptionButton image="/export_sched.png" label="Export" />
