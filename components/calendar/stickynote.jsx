@@ -10,6 +10,7 @@ const StickyNote = (props) => {
       <div className={styles.schedule}>
         <p className={styles.course}>{props.course}</p>
         <p className={styles.instructor}>{props.instructor}</p>
+        <p>{props.subject}</p>
         <p className={styles.room}>{props.room}</p>
         <div className={styles.timeContainer}>
           <p className={styles.startTime}>{props.startTime}</p>
