@@ -100,6 +100,9 @@ const Meeting = (props) => {
               <p>Start Time</p>
               <input
                 type="number"
+                defaultValue={
+                  props.schedule && props.schedule.startTime.split(':')[0]
+                }
                 id="startHour"
                 placeholder={
                   props.schedule ? props.schedule.startTime.split(':')[0] : '12'
@@ -109,6 +112,10 @@ const Meeting = (props) => {
               <input
                 type="number"
                 id="startMin"
+                defaultValue={
+                  props.schedule &&
+                  props.schedule.startTime.slice(0, -3).split(':')[1]
+                }
                 placeholder={
                   props.schedule
                     ? props.schedule.startTime.slice(0, -3).split(':')[1]
@@ -132,6 +139,7 @@ const Meeting = (props) => {
               <input
                 type="number"
                 id="endHour"
+                defaultValue={props.schedule && props.schedule.endTime.split(':')[0]}
                 placeholder={
                   props.schedule ? props.schedule.endTime.split(':')[0] : '12'
                 }
@@ -140,6 +148,9 @@ const Meeting = (props) => {
               <input
                 type="number"
                 id="endMin"
+                defaultValue={
+                  props.schedule && props.schedule.endTime.slice(0, -3).split(':')[1]
+                }
                 placeholder={
                   props.schedule
                     ? props.schedule.endTime.slice(0, -3).split(':')[1]
@@ -162,13 +173,11 @@ const Meeting = (props) => {
         </div>
         <div className={styles.dateAndTimeContainer}>
           <div className={styles.otherInfo}>
-            <p>Course</p>
+            <p>Section</p>
             <input
               type="text"
               placeholder={
-                props.schedule?.subject
-                  ? props.schedule.subject
-                  : 'optional (ex. Lab)'
+                props.schedule?.subject ? props.schedule.subject : '(ex. BSIT A 001)'
               }
               onChange={(e) => {
                 props.setParentCourse(e.target.value);
