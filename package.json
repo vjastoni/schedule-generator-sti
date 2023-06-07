@@ -1,9 +1,12 @@
 {
+  "homepage": "http://vjastoni.github.io/schedule-generator-sti",
   "name": "schedule-generator-sti",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -23,5 +26,8 @@
     "react-dom": "18.2.0",
     "swr": "^2.1.5",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
