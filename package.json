@@ -9,7 +9,8 @@
     "deploy": "gh-pages -d build",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@azure/msal-browser": "^2.37.0",
