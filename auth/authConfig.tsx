@@ -18,7 +18,7 @@ export const msalConfig = {
 		redirectUri:
 			process.env.NODE_ENV === "development"
 				? "http://localhost:3000/"
-				: `https://${process.env.VERCEL_URL}`,
+				: `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`,
 	},
 	cache: {
 		cacheLocation: "sessionStorage", // This configures where your cache will be stored
