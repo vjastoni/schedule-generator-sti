@@ -15,7 +15,7 @@ export const msalConfig = {
     clientId: 'a54a5c68-c5dd-47b9-9372-451b52f08d44',
     authority:
       'https://login.microsoftonline.com/ac848b9f-db81-4f90-8617-684472457a47',
-    redirectUri: 'https://schedule-generator-sti.vercel.app',
+    redirectUri: 'http://localhost:3000/',
   },
   cache: {
     cacheLocation: 'sessionStorage', // This configures where your cache will be stored
