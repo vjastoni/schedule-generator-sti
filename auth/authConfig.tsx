@@ -18,11 +18,11 @@ export const msalConfig = {
 		redirectUri:
 			process.env.NODE_ENV === "development"
 				? "http://localhost:3000/"
-				: `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`,
+				: `https://schedule-generator-sti.vercel.app`,
 	},
 	cache: {
 		cacheLocation: "sessionStorage", // This configures where your cache will be stored
-		storeAuthStateInCookie: false, // Set this to "true" if you are having issues on IE11 or Edge 
+		storeAuthStateInCookie: false, // Set this to "true" if you are having issues on IE11 or Edge
 	},
 	system: {
 		loggerOptions: {
