@@ -95,7 +95,6 @@ const Dashboard = () => {
             image="/delete_sched.png"
             label="Delete Schedule"
           /> */}
-          <OptionButton image="/save_sched.png" label="Save Schedule" />
           <OptionButton image="/print_sched.png" label="Print" />
           <OptionButton image="/export_sched.png" label="Export" />
           <OptionButton image="/import_sched.png" label="Import" />

@@ -41,6 +41,7 @@ const Calendar = (props) => {
                 subject={schedule.subject}
                 endTime={schedule.endTime}
                 room={schedule.room}
+                section={schedule.section}
                 instructor={schedule.instructor}
               />
             ))}
@@ -61,6 +62,7 @@ const Calendar = (props) => {
                 subject={schedule.subject}
                 endTime={schedule.endTime}
                 room={schedule.room}
+                section={schedule.section}
                 instructor={schedule.instructor}
               />
             ))}
@@ -81,6 +83,7 @@ const Calendar = (props) => {
                 subject={schedule.subject}
                 endTime={schedule.endTime}
                 room={schedule.room}
+                section={schedule.section}
                 instructor={schedule.instructor}
               />
             ))}
@@ -101,6 +104,7 @@ const Calendar = (props) => {
                 subject={schedule.subject}
                 endTime={schedule.endTime}
                 room={schedule.room}
+                section={schedule.section}
                 instructor={schedule.instructor}
               />
             ))}
@@ -121,6 +125,7 @@ const Calendar = (props) => {
                 subject={schedule.subject}
                 endTime={schedule.endTime}
                 room={schedule.room}
+                section={schedule.section}
                 instructor={schedule.instructor}
               />
             ))}
@@ -141,6 +146,7 @@ const Calendar = (props) => {
                 subject={schedule.subject}
                 endTime={schedule.endTime}
                 room={schedule.room}
+                section={schedule.section}
                 instructor={schedule.instructor}
               />
             ))}
@@ -162,6 +168,7 @@ const Calendar = (props) => {
                 subject={schedule.subject}
                 endTime={schedule.endTime}
                 room={schedule.room}
+                section={schedule.section}
                 instructor={schedule.instructor}
               />
             ))}
